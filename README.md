@@ -57,7 +57,7 @@ A consulta e reserva de salas e uma necessidade diaria de todos os alunos. O CP1
 
 - [Node.js](https://nodejs.org/) v20 ou superior
 - [Expo Go](https://expo.dev/go) instalado no celular (Android ou iOS) **ou** emulador Android/iOS
-- Expo SDK 55
+- Expo SDK 54
 
 ### Passo a passo
 
