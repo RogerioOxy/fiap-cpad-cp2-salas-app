@@ -87,40 +87,45 @@ npx expo start
 
 ---
 
-## d) Demonstracao Visual
+## d) Demonstração Visual
 
-### Prints das Telas
+### Prints das telas
 
-| Tela | Descricao |
-|------|-----------|
-| ![Login](./assets/screenshots/01-login.png) | Login com validacao inline |
-| ![Cadastro](./assets/screenshots/02-cadastro.png) | Cadastro com validacao de senha/confirmacao |
-| ![Home](./assets/screenshots/03-home.png) | Saudacao, estatisticas e atalho de reservas |
-| ![Salas — Light](./assets/screenshots/04-salas-light.png) | Lista de salas com busca em tempo real |
-| ![Salas — Dark](./assets/screenshots/05-salas-dark.png) | Mesma tela em modo escuro |
-| ![Modal Reserva](./assets/screenshots/06-modal-reserva.png) | Modal de selecao de horario |
-| ![Reservas](./assets/screenshots/07-reservas.png) | Lista de reservas do usuario logado |
-| ![Sobre](./assets/screenshots/08-sobre.png) | Sessao do usuario, integrantes e logout |
+Capturas reais do app rodando em iPhone (iOS) com Expo Go.
 
-> **Como gerar:** rode o app no Expo Go ou emulador Android Studio, abra cada tela e use:
-> - Android: botoes de volume + power, ou Android Studio → emulador → camera icon
-> - iOS: cmd+s no simulador
-> - Salve as imagens em `assets/screenshots/` com os nomes acima.
+#### Tela Início (Home)
 
-### Video / GIF de demonstracao
+| Tema claro | Tema escuro |
+|---|---|
+| ![Home Light](./assets/screenshots/02-home-light.jpeg) | ![Home Dark](./assets/screenshots/01-home-dark.jpeg) |
 
-Fluxo completo (cadastro → login → reserva → cancelar → trocar tema → logout):
+#### Tela Salas — filtros, busca e detalhes
 
-> **[Substituir aqui pelo link do YouTube ou Google Drive]**
+| Filtro 1º Andar (Light) | Filtro 2º Andar (Dark) | Busca em tempo real (Dark) |
+|---|---|---|
+| ![Salas Light](./assets/screenshots/03-salas-light-filtro-1andar.jpeg) | ![Salas Dark](./assets/screenshots/04-salas-dark-filtro-2andar.jpeg) | ![Busca](./assets/screenshots/05-salas-dark-busca-tempo-real.jpeg) |
 
-Para gravar:
-- **Android Studio**: emulador → menu lateral → *Record Screen*
-- **Celular**: gravacao de tela nativa (Android 11+) ou QuickTime (iOS conectado ao Mac)
-- Suba no YouTube (nao listado) ou Google Drive (compartilhado para qualquer pessoa com o link) e cole o link aqui.
+| Detalhes da sala expandido | Modal de reserva |
+|---|---|
+| ![Detalhes](./assets/screenshots/06-salas-dark-detalhes-sala.jpeg) | ![Modal](./assets/screenshots/07-modal-reserva-dark.jpeg) |
+
+#### Tela Reservas
+
+| Tema claro | Tema escuro |
+|---|---|
+| ![Reservas Light](./assets/screenshots/09-reservas-light.jpeg) | ![Reservas Dark](./assets/screenshots/08-reservas-dark.jpeg) |
+
+#### Tela Sobre
+
+| Topo (Light) | Topo (Dark) | Informações Acadêmicas |
+|---|---|---|
+| ![Sobre Light](./assets/screenshots/10-sobre-light-topo.jpeg) | ![Sobre Dark](./assets/screenshots/12-sobre-dark-topo.jpeg) | ![Info](./assets/screenshots/11-sobre-light-info-academicas.jpeg) |
+
+> Telas de **Login** e **Cadastro** seguem o mesmo padrão visual da tela "Sobre" (campos com Input customizado, validação inline em vermelho abaixo de cada campo, botão desabilitado enquanto há erros). Estão implementadas em `app/(auth)/login.jsx` e `app/(auth)/cadastro.jsx`.
 
 ---
 
-## e) Decisoes Tecnicas
+## e) Decisões Técnicas
 
 ### Estrutura de pastas
 
