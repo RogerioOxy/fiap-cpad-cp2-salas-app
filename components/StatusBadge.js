@@ -10,11 +10,11 @@ export default function StatusBadge({ status }) {
   const getStatusInfo = () => {
     switch (status) {
       case 'disponivel':
-        return { label: 'Disponivel', color: c.success, bg: c.successSoft };
+        return { label: 'Disponível', color: c.success, bg: c.successSoft };
       case 'ocupada':
         return { label: 'Ocupada', color: c.danger, bg: c.dangerSoft };
       case 'manutencao':
-        return { label: 'Manutencao', color: c.warning, bg: c.warningSoft };
+        return { label: 'Manutenção', color: c.warning, bg: c.warningSoft };
       default:
         return { label: 'Indefinido', color: c.textMuted, bg: c.surfaceMuted };
     }

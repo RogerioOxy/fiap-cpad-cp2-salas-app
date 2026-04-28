@@ -136,7 +136,7 @@ export default function Salas() {
                   selectedFloor === 0 && { color: '#fff' },
                 ]}
               >
-                Todos
+                Todos os andares
               </Text>
             </TouchableOpacity>
 
@@ -157,7 +157,7 @@ export default function Salas() {
                     selectedFloor === floor && { color: '#fff' },
                   ]}
                 >
-                  {floor}o Andar
+                  {floor}º Andar
                 </Text>
               </TouchableOpacity>
             ))}
@@ -188,13 +188,13 @@ export default function Salas() {
               <RoomCard room={room} onPress={() => handleRoomPress(room)} />
 
               {selectedRoom && selectedRoom.id === room.id && (
-                <View style={[styles.detailCard, { backgroundColor: c.primarySoft }]}>
-                  <Text style={[styles.detailTitle, { color: c.primary }]}>Detalhes da Sala</Text>
+                <View style={[styles.detailCard, { backgroundColor: c.surface, borderColor: c.primary }]}>
+                  <Text style={[styles.detailTitle, { color: c.primary }]}>Detalhes da sala</Text>
 
                   <View style={styles.detailRow}>
                     <Ionicons name="location-outline" size={18} color={c.primary} />
                     <Text style={[styles.detailText, { color: c.text }]}>
-                      {room.name} - {room.floor}o Andar
+                      {room.name} — {room.floor}º Andar
                     </Text>
                   </View>
 
@@ -223,7 +223,7 @@ export default function Salas() {
                     <View style={styles.detailRow}>
                       <Ionicons name="time-outline" size={18} color={c.success} />
                       <Text style={[styles.detailText, { color: c.success }]}>
-                        Proxima: {room.nextClass}
+                        Próxima: {room.nextClass}
                       </Text>
                     </View>
                   )}
@@ -232,7 +232,7 @@ export default function Salas() {
                     <View style={[styles.warningBox, { backgroundColor: c.warningSoft }]}>
                       <Ionicons name="warning-outline" size={18} color={c.warning} />
                       <Text style={[styles.warningText, { color: c.warning }]}>
-                        Esta sala esta em manutencao e nao pode ser reservada.
+                        Esta sala está em manutenção e não pode ser reservada.
                       </Text>
                     </View>
                   ) : (
@@ -269,7 +269,7 @@ export default function Salas() {
             </View>
 
             <Text style={[styles.modalSubtitle, { color: c.textMuted }]}>
-              Escolha o horario:
+              Escolha o horário:
             </Text>
 
             <ScrollView style={styles.slotsScroll}>
@@ -300,7 +300,7 @@ export default function Salas() {
                         selected && { color: '#fff', fontWeight: 'bold' },
                       ]}
                     >
-                      {slot} {taken ? '(ja reservado)' : ''}
+                      {slot} {taken ? '(já reservado)' : ''}
                     </Text>
                   </TouchableOpacity>
                 );
@@ -359,6 +359,7 @@ const styles = StyleSheet.create({
   loadingText: { fontSize: 14 },
   detailCard: {
     borderRadius: radius.md,
+    borderLeftWidth: 4,
     padding: spacing.lg,
     marginTop: -spacing.xs,
     marginBottom: spacing.md,

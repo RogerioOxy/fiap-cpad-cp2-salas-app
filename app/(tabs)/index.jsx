@@ -41,20 +41,20 @@ export default function Home() {
       contentContainerStyle={{ padding: spacing.xl }}
       showsVerticalScrollIndicator={false}
     >
-      {/* Banner principal com saudacao personalizada */}
+      {/* Banner principal com saudação personalizada */}
       <View style={[styles.banner, { backgroundColor: c.primary }]}>
-        <Text style={styles.bannerHi}>Ola, {firstName}!</Text>
+        <Text style={styles.bannerHi}>Olá, {firstName}!</Text>
         <Text style={styles.bannerTitle}>FIAP Salas</Text>
         <Text style={styles.bannerSubtitle}>
           Consulte a disponibilidade e reserve salas em tempo real
         </Text>
       </View>
 
-      {/* Cards de estatisticas */}
+      {/* Cards de estatísticas */}
       <View style={styles.statsRow}>
         <View style={[styles.statCard, { backgroundColor: c.successSoft }]}>
           <Text style={[styles.statNumber, { color: c.success }]}>{stats.disponiveis}</Text>
-          <Text style={[styles.statLabel, { color: c.text }]}>Disponiveis</Text>
+          <Text style={[styles.statLabel, { color: c.text }]}>Disponíveis</Text>
         </View>
         <View style={[styles.statCard, { backgroundColor: c.dangerSoft }]}>
           <Text style={[styles.statNumber, { color: c.danger }]}>{stats.ocupadas}</Text>
@@ -66,7 +66,7 @@ export default function Home() {
         </View>
       </View>
 
-      {/* Card minhas reservas (resumo rapido) */}
+      {/* Card minhas reservas (resumo rápido) */}
       <TouchableOpacity
         style={[styles.reservasCard, { backgroundColor: c.surface, borderColor: c.borderSoft }]}
         onPress={() => router.push('/(tabs)/reservas')}
@@ -79,7 +79,7 @@ export default function Home() {
           <Text style={[styles.reservasTitle, { color: c.text }]}>Minhas reservas</Text>
           <Text style={[styles.reservasSubtitle, { color: c.textMuted }]}>
             {reservations.length === 0
-              ? 'Voce ainda nao tem reservas. Toque para agendar!'
+              ? 'Você ainda não tem reservas. Toque para agendar!'
               : `${reservations.length} reserva${reservations.length === 1 ? '' : 's'} ativa${reservations.length === 1 ? '' : 's'}.`}
           </Text>
         </View>
@@ -104,7 +104,7 @@ export default function Home() {
           <View style={styles.infoTextArea}>
             <Text style={[styles.infoCardTitle, { color: c.text }]}>Consulte</Text>
             <Text style={[styles.infoCardDesc, { color: c.textMuted }]}>
-              Veja quais salas estao livres agora
+              Veja quais salas estão livres agora
             </Text>
           </View>
         </View>
@@ -124,7 +124,7 @@ export default function Home() {
           <View style={styles.infoTextArea}>
             <Text style={[styles.infoCardTitle, { color: c.text }]}>Planeje</Text>
             <Text style={[styles.infoCardDesc, { color: c.textMuted }]}>
-              Veja a proxima aula agendada em cada sala
+              Veja a próxima aula agendada em cada sala
             </Text>
           </View>
         </View>

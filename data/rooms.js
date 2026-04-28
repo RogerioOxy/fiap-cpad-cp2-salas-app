@@ -1,6 +1,14 @@
 // Dados simulados de salas da FIAP (seed data)
-// Em um app real, esses dados viriam de uma API
-// As reservas criadas pelos usuarios sao persistidas no AsyncStorage (ver AppDataContext)
+// Em um app real, esses dados viriam de uma API.
+// As reservas criadas pelos usuários são persistidas no AsyncStorage (ver AppDataContext).
+//
+// Matérias e professores baseados na grade real da Engenharia de Computação - 2º ano:
+//   POO              — Prof. Ygor Anjos
+//   CPAD             — Prof. Hercules Ramos
+//   DSA              — Prof. Roberto Beraldo
+//   Edge Computing   — Prof. Marcelo Morgantini
+//   OS & Networks    — Prof. Victor Fernandes
+//   Design Thinking
 
 const rooms = [
   {
@@ -11,7 +19,7 @@ const rooms = [
     capacity: 40,
     status: 'disponivel',
     currentClass: null,
-    nextClass: 'POO - 14:00',
+    nextClass: 'POO - Prof. Ygor - 14:00',
   },
   {
     id: 2,
@@ -37,17 +45,17 @@ const rooms = [
     id: 4,
     name: 'Lab 201',
     floor: 2,
-    type: 'Laboratorio',
+    type: 'Laboratório',
     capacity: 30,
     status: 'ocupada',
-    currentClass: 'Edge Computing - Prof. Santos',
+    currentClass: 'Edge Computing - Prof. Morgantini',
     nextClass: null,
   },
   {
     id: 5,
     name: 'Lab 202',
     floor: 2,
-    type: 'Laboratorio',
+    type: 'Laboratório',
     capacity: 30,
     status: 'manutencao',
     currentClass: null,
@@ -57,11 +65,11 @@ const rooms = [
     id: 6,
     name: 'Lab 203',
     floor: 2,
-    type: 'Laboratorio',
+    type: 'Laboratório',
     capacity: 25,
     status: 'disponivel',
     currentClass: null,
-    nextClass: 'OS & Analytics - 16:00',
+    nextClass: 'OS & Networks - Prof. Victor - 16:00',
   },
   {
     id: 7,
@@ -70,7 +78,7 @@ const rooms = [
     type: 'Sala de Aula',
     capacity: 45,
     status: 'ocupada',
-    currentClass: 'Matematica - Prof. Lima',
+    currentClass: 'DSA - Prof. Roberto',
     nextClass: null,
   },
   {
@@ -81,23 +89,23 @@ const rooms = [
     capacity: 45,
     status: 'disponivel',
     currentClass: null,
-    nextClass: 'Ingles - 17:00',
+    nextClass: 'POO - Prof. Ygor - 17:00',
   },
   {
     id: 9,
-    name: 'Auditorio',
+    name: 'Auditório',
     floor: 1,
-    type: 'Auditorio',
+    type: 'Auditório',
     capacity: 200,
     status: 'disponivel',
     currentClass: null,
-    nextClass: 'Palestra IA - 19:00',
+    nextClass: 'Palestra - 19:00',
   },
   {
     id: 10,
     name: 'Lab 204',
     floor: 2,
-    type: 'Laboratorio',
+    type: 'Laboratório',
     capacity: 28,
     status: 'ocupada',
     currentClass: 'CPAD - Prof. Hercules',
@@ -105,7 +113,7 @@ const rooms = [
   },
 ];
 
-// Slots de horario disponiveis para reserva
+// Slots de horário disponíveis para reserva
 export const TIME_SLOTS = [
   '08:00 - 09:40',
   '09:50 - 11:30',

@@ -1,17 +1,14 @@
 // Tokens visuais do app (tema claro e escuro)
 // Centraliza cores, espaçamentos e tipografia para garantir consistência
-// e suportar o diferencial de tema dinamico (dark mode)
+// e suportar o diferencial de tema dinâmico (dark mode)
 
+// Cores fixas (mesma identidade em qualquer tema)
 const palette = {
   primary: '#ED145B',       // Magenta FIAP
   primaryDark: '#B30D45',
-  primarySoft: '#FDE8EF',
   success: '#4CAF50',
-  successSoft: '#E8F5E9',
   danger: '#F44336',
-  dangerSoft: '#FFEBEE',
   warning: '#FF9800',
-  warningSoft: '#FFF3E0',
   white: '#FFFFFF',
   black: '#000000',
 };
@@ -20,6 +17,11 @@ export const lightTheme = {
   mode: 'light',
   colors: {
     ...palette,
+    // Cores "soft" — fundo claro com tom de cor
+    primarySoft: '#FDE8EF',
+    successSoft: '#E8F5E9',
+    dangerSoft: '#FFEBEE',
+    warningSoft: '#FFF3E0',
     background: '#F0F0F5',
     surface: '#FFFFFF',
     surfaceMuted: '#F8F8FA',
@@ -38,6 +40,11 @@ export const darkTheme = {
   mode: 'dark',
   colors: {
     ...palette,
+    // Cores "soft" no dark — translúcidas, para texto claro ficar legível
+    primarySoft: 'rgba(237, 20, 91, 0.22)',
+    successSoft: 'rgba(76, 175, 80, 0.22)',
+    dangerSoft: 'rgba(244, 67, 54, 0.22)',
+    warningSoft: 'rgba(255, 152, 0, 0.22)',
     background: '#15151C',
     surface: '#1E1E27',
     surfaceMuted: '#2A2A36',

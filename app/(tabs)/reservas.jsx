@@ -53,10 +53,10 @@ export default function Reservas() {
           <EmptyState
             icon="calendar-outline"
             title="Nenhuma reserva ainda"
-            message="Reserve uma sala disponivel na aba Salas e ela aparecera aqui."
+            message="Reserve uma sala disponível na aba Salas e ela aparecerá aqui."
           />
           <Button
-            label="Ver salas disponiveis"
+            label="Ver salas disponíveis"
             icon="grid-outline"
             onPress={() => router.push('/(tabs)/salas')}
             style={{ marginHorizontal: spacing.xl, marginTop: spacing.md }}
@@ -109,7 +109,7 @@ export default function Reservas() {
             <Ionicons name="alert-circle" size={40} color={c.warning} />
             <Text style={[styles.modalTitle, { color: c.text }]}>Cancelar reserva?</Text>
             <Text style={[styles.modalText, { color: c.textMuted }]}>
-              A reserva sera removida e o horario liberado para outros usuarios.
+              A reserva será removida e o horário liberado para outros usuários.
             </Text>
             <View style={styles.modalActions}>
               <Button

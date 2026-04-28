@@ -71,7 +71,7 @@ export default function Sobre() {
           <Ionicons name="school" size={48} color={c.primary} />
         </View>
         <Text style={[styles.appName, { color: c.text }]}>FIAP Salas</Text>
-        <Text style={[styles.version, { color: c.textMuted }]}>Versao 2.0.0 (CP2)</Text>
+        <Text style={[styles.version, { color: c.textMuted }]}>Versão 2.0.0 (CP2)</Text>
         <Text style={[styles.themeHint, { color: c.textMuted }]}>
           Tema atual: {mode === 'dark' ? 'Escuro' : 'Claro'}
         </Text>
@@ -81,13 +81,13 @@ export default function Sobre() {
       <View style={[styles.section, { backgroundColor: c.surface }]}>
         <Text style={[styles.sectionTitle, { color: c.primary }]}>Sobre o Projeto</Text>
         <Text style={[styles.description, { color: c.textMuted }]}>
-          O FIAP Salas e um aplicativo mobile que permite aos alunos da FIAP
-          consultar e reservar salas de aula, laboratorios e auditorios.
+          O FIAP Salas é um aplicativo mobile que permite aos alunos da FIAP
+          consultar e reservar salas de aula, laboratórios e auditórios.
         </Text>
         <Text style={[styles.description, { color: c.textMuted }]}>
-          Esta versao (CP2) evolui o MVP do CP1 adicionando autenticacao com
+          Esta versão (CP2) evolui o MVP do CP1 adicionando autenticação com
           AsyncStorage, gerenciamento de estado global via Context API,
-          formularios validados, persistencia de reservas, busca em tempo real
+          formulários validados, persistência de reservas, busca em tempo real
           e suporte a tema claro/escuro.
         </Text>
       </View>
@@ -96,13 +96,13 @@ export default function Sobre() {
       <View style={[styles.section, { backgroundColor: c.surface }]}>
         <Text style={[styles.sectionTitle, { color: c.primary }]}>Funcionalidades</Text>
         {[
-          'Cadastro e login com persistencia (AsyncStorage)',
-          'Sessao lembrada — login automatico ao reabrir o app',
-          'Reservas de salas com CRUD persistido por usuario',
+          'Cadastro e login com persistência (AsyncStorage)',
+          'Sessão lembrada — login automático ao reabrir o app',
+          'Reservas de salas com CRUD persistido por usuário',
           'Busca em tempo real e filtro por andar',
-          'Validacao inline de todos os formularios',
-          'Tema claro/escuro com preferencia salva',
-          'Navegacao protegida (rotas privadas)',
+          'Validação inline de todos os formulários',
+          'Tema claro/escuro com preferência salva',
+          'Navegação protegida (rotas privadas)',
         ].map((label) => (
           <View key={label} style={styles.featureItem}>
             <Ionicons name="checkmark-circle" size={20} color={c.success} />
@@ -143,7 +143,7 @@ export default function Sobre() {
           </View>
           <View style={styles.memberInfo}>
             <Text style={[styles.memberName, { color: c.text }]}>
-              Rogerio Deligi Ferreira Filho
+              Rogério Deligi Ferreira Filho
             </Text>
             <Text style={[styles.memberRm, { color: c.textMuted }]}>RM561942</Text>
           </View>
@@ -164,13 +164,13 @@ export default function Sobre() {
 
       {/* Disciplina */}
       <View style={[styles.section, { backgroundColor: c.surface }]}>
-        <Text style={[styles.sectionTitle, { color: c.primary }]}>Informacoes Academicas</Text>
+        <Text style={[styles.sectionTitle, { color: c.primary }]}>Informações Acadêmicas</Text>
         {[
           ['Disciplina:', 'Cross-Platform Application Development'],
           ['Professor:', 'Hercules Ramos'],
-          ['Curso:', 'Ciencia da Computacao - 2o Ano'],
-          ['Instituicao:', 'FIAP'],
-          ['Checkpoint:', '02 (CP2) - 2026'],
+          ['Curso:', 'Engenharia de Computação — 2º Ano'],
+          ['Instituição:', 'FIAP'],
+          ['Checkpoint:', '02 (CP2) — 2026'],
         ].map(([label, value]) => (
           <View key={label} style={styles.infoRow}>
             <Text style={[styles.infoLabel, { color: c.text }]}>{label}</Text>
@@ -214,7 +214,7 @@ export default function Sobre() {
             <Ionicons name="log-out" size={40} color={c.primary} />
             <Text style={[styles.modalTitle, { color: c.text }]}>Sair da conta?</Text>
             <Text style={[styles.modalDesc, { color: c.textMuted }]}>
-              Voce precisara fazer login novamente para acessar suas reservas.
+              Você precisará fazer login novamente para acessar suas reservas.
             </Text>
             <View style={styles.modalActions}>
               <Button

@@ -49,14 +49,14 @@ export function AppDataProvider({ children }) {
 
   const addReservation = useCallback(
     async ({ roomId, roomName, slot }) => {
-      if (!user) return { ok: false, error: 'Usuario nao autenticado.' };
+      if (!user) return { ok: false, error: 'Usuário não autenticado.' };
       const all = await readAll();
       const userReservations = all[user.email] || [];
       const duplicate = userReservations.find(
         (r) => r.roomId === roomId && r.slot === slot
       );
       if (duplicate) {
-        return { ok: false, error: 'Voce ja reservou essa sala neste horario.' };
+        return { ok: false, error: 'Você já reservou essa sala neste horário.' };
       }
       const newReservation = {
         id: `${Date.now()}-${roomId}`,

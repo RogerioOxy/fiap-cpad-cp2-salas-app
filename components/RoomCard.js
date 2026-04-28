@@ -45,7 +45,7 @@ export default function RoomCard({ room, onPress }) {
         </View>
         <View style={styles.detailItem}>
           <Ionicons name="layers-outline" size={16} color={c.textMuted} />
-          <Text style={[styles.detailText, { color: c.textMuted }]}>{room.floor}o andar</Text>
+          <Text style={[styles.detailText, { color: c.textMuted }]}>{room.floor}º andar</Text>
         </View>
       </View>
 
@@ -59,7 +59,7 @@ export default function RoomCard({ room, onPress }) {
       {room.nextClass && room.status === 'disponivel' && (
         <View style={[styles.classInfo, { borderTopColor: c.borderSoft }]}>
           <Ionicons name="time-outline" size={14} color={c.success} />
-          <Text style={[styles.classText, { color: c.success }]}>Proxima: {room.nextClass}</Text>
+          <Text style={[styles.classText, { color: c.success }]}>Próxima: {room.nextClass}</Text>
         </View>
       )}
     </TouchableOpacity>

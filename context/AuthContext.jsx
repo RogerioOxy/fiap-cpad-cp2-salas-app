@@ -45,7 +45,7 @@ export function AuthProvider({ children }) {
     const normalizedEmail = email.trim().toLowerCase();
     const users = await readUsers();
     if (users.some((u) => u.email === normalizedEmail)) {
-      return { ok: false, error: 'Ja existe uma conta com este e-mail.' };
+      return { ok: false, error: 'Já existe uma conta com este e-mail.' };
     }
     const newUser = { name: name.trim(), email: normalizedEmail, password };
     await writeUsers([...users, newUser]);
@@ -59,7 +59,7 @@ export function AuthProvider({ children }) {
     const users = await readUsers();
     const found = users.find((u) => u.email === normalizedEmail);
     if (!found) {
-      return { ok: false, error: 'E-mail nao cadastrado.' };
+      return { ok: false, error: 'E-mail não cadastrado.' };
     }
     if (found.password !== password) {
       return { ok: false, error: 'Senha incorreta.' };

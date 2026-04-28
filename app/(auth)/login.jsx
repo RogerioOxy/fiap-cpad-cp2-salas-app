@@ -36,11 +36,11 @@ export default function LoginScreen() {
 
   const validate = () => {
     const next = {};
-    if (!email.trim()) next.email = 'O e-mail e obrigatorio.';
-    else if (!isValidEmail(email.trim())) next.email = 'Formato de e-mail invalido.';
+    if (!email.trim()) next.email = 'O e-mail é obrigatório.';
+    else if (!isValidEmail(email.trim())) next.email = 'Formato de e-mail inválido.';
 
-    if (!password) next.password = 'A senha e obrigatoria.';
-    else if (password.length < 6) next.password = 'A senha deve ter no minimo 6 caracteres.';
+    if (!password) next.password = 'A senha é obrigatória.';
+    else if (password.length < 6) next.password = 'A senha deve ter no mínimo 6 caracteres.';
 
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -143,7 +143,7 @@ export default function LoginScreen() {
 
           <View style={styles.footerRow}>
             <Text style={[styles.footerText, { color: c.textMuted }]}>
-              Ainda nao tem conta?{' '}
+              Ainda não tem conta?{' '}
             </Text>
             <Link href="/(auth)/cadastro" asChild>
               <TouchableOpacity>

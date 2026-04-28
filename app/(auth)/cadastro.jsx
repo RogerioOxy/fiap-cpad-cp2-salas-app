@@ -37,18 +37,18 @@ export default function CadastroScreen() {
 
   const validate = () => {
     const next = {};
-    if (!name.trim()) next.name = 'O nome completo e obrigatorio.';
+    if (!name.trim()) next.name = 'O nome completo é obrigatório.';
     else if (name.trim().split(/\s+/).length < 2)
       next.name = 'Informe nome e sobrenome.';
 
-    if (!email.trim()) next.email = 'O e-mail e obrigatorio.';
-    else if (!isValidEmail(email.trim())) next.email = 'Formato de e-mail invalido.';
+    if (!email.trim()) next.email = 'O e-mail é obrigatório.';
+    else if (!isValidEmail(email.trim())) next.email = 'Formato de e-mail inválido.';
 
-    if (!password) next.password = 'A senha e obrigatoria.';
-    else if (password.length < 6) next.password = 'A senha deve ter no minimo 6 caracteres.';
+    if (!password) next.password = 'A senha é obrigatória.';
+    else if (password.length < 6) next.password = 'A senha deve ter no mínimo 6 caracteres.';
 
     if (!confirm) next.confirm = 'Confirme a senha.';
-    else if (confirm !== password) next.confirm = 'As senhas nao coincidem.';
+    else if (confirm !== password) next.confirm = 'As senhas não coincidem.';
 
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -91,7 +91,7 @@ export default function CadastroScreen() {
 
         <Text style={[styles.title, { color: c.text }]}>Criar Conta</Text>
         <Text style={[styles.subtitle, { color: c.textMuted }]}>
-          Preencha os dados abaixo para comecar
+          Preencha os dados abaixo para começar
         </Text>
 
         <View style={styles.form}>
@@ -130,7 +130,7 @@ export default function CadastroScreen() {
               if (errors.password) setErrors({ ...errors, password: undefined });
               if (errors.confirm && confirm === v) setErrors({ ...errors, confirm: undefined });
             }}
-            placeholder="Minimo 6 caracteres"
+            placeholder="Mínimo 6 caracteres"
             secureTextEntry
             icon="lock-closed-outline"
             error={errors.password}
@@ -172,7 +172,7 @@ export default function CadastroScreen() {
           />
 
           <View style={styles.footerRow}>
-            <Text style={[styles.footerText, { color: c.textMuted }]}>Ja tem conta? </Text>
+            <Text style={[styles.footerText, { color: c.textMuted }]}>Já tem conta? </Text>
             <Link href="/(auth)/login" asChild>
               <TouchableOpacity>
                 <Text style={[styles.linkText, { color: c.primary }]}>Fazer login</Text>
