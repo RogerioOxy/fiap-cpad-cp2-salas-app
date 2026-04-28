@@ -68,8 +68,8 @@ git clone https://github.com/RogerioOxy/fiap-cpad-cp2-salas-app.git
 # 2. Entre na pasta do projeto
 cd fiap-cpad-cp2-salas-app
 
-# 3. Instale as dependencias
-npm install
+# 3. Instale as dependencias (com --legacy-peer-deps por causa do React 19)
+npm install --legacy-peer-deps
 
 # 4. Rode o projeto
 npx expo start
@@ -79,7 +79,11 @@ npx expo start
    - Android: abra o Expo Go e escaneie diretamente
    - iOS: use a camera nativa e clique no link
 
+> **Importante:** o `--legacy-peer-deps` resolve um conflito conhecido entre React 19 e algumas dependencias internas do Expo Router (radix-ui/vaul). Sem essa flag, o npm aborta com `ERESOLVE`.
+
 > Caso o app reclame da versao do AsyncStorage, rode `npx expo install @react-native-async-storage/async-storage` para alinhar com o SDK.
+
+> **Importante (Windows + OneDrive):** se o caminho do projeto contiver espacos, `&`, ou estiver dentro de uma pasta sincronizada do OneDrive, o Metro Bundler pode nao subir. Mova o projeto para um caminho limpo (ex: `C:\dev\fiap-cpad-cp2-salas-app`) antes de rodar.
 
 ---
 
